@@ -2,3 +2,9 @@
 **/dist
 .DS_Store
 coverage
+
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
