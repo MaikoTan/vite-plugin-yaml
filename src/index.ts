@@ -28,6 +28,12 @@ export type PluginOptions = {
    */
   schema?: Schema;
   /**
+   * A boolean to determine if JSON object should be serialized.
+   *
+   * @see https://www.npmjs.com/package/tosource for the motivation behind serialization of JSON.
+   */
+  raw?: boolean;
+  /**
    * A function that will be called for error reporting.
    *
    * Defaults to `console.warn()`.
@@ -67,7 +73,7 @@ export default (
       });
 
       return {
-        code: `const data = ${toSource(yamlData)};\nexport default data;`,
+        code: `const data = ${options.raw ? yamlData : toSource(yamlData)};\nexport default data;`,
         map: { mappings: "" },
       };
     }
