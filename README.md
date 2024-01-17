@@ -85,6 +85,12 @@ exclude?: FilterPattern;
  */
 schema?: Schema;
 /**
+ * A boolean to determine if JSON object should be serialized.
+ *
+ * @see https://www.npmjs.com/package/tosource for the motivation behind serialization of JSON.
+ */
+raw?: boolean;
+/**
  * A function that will be called for error reporting.
  *
  * Defaults to `console.warn()`.
