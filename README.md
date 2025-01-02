@@ -1,17 +1,17 @@
 [![Pipeline](https://github.com/Modyfi/vite-plugin-yaml/actions/workflows/pipeline.yml/badge.svg)](https://github.com/Modyfi/vite-plugin-yaml/actions/workflows/pipeline.yml)
 
-# 🧹 vite-plugin-yaml
+# 🧹 @maikolib/vite-plugin-yaml
 
 Transforms a YAML file into a JS object.
 
 ## 🚀 Install
 
-```
-npm install -D @modyfi/vite-plugin-yaml
+```bash
+yarn add -D @maikolib/vite-plugin-yaml
 # or
-# yarn add -D @modyfi/vite-plugin-yaml
+npm install -D @maikolib/vite-plugin-yaml
 # or
-# pnpm i -D @modyfi/vite-plugin-yaml
+pnpm i -D @maikolib/vite-plugin-yaml
 ```
 
 ## 🦄 Usage
@@ -20,7 +20,7 @@ Add `ViteYAML` to `vite.config.js / vite.config.ts`:
 
 ```ts
 // vite.config.js / vite.config.ts
-import ViteYaml from '@modyfi/vite-plugin-yaml';
+import ViteYaml from '@maikolib/vite-plugin-yaml';
 
 export default {
   plugins: [
@@ -43,15 +43,15 @@ Do note that you may have to include the file type in your import.
 
 The recommended way to add type definitions for `.yaml` or `.yml` modules is via a `tsconfig.json` file.
 
-```ts
+```jsonc
 // tsconfig.json
 {
   "compilerOptions": {
     ...
     "types": [
-      ...
-      "@modyfi/vite-plugin-yaml/modules"
-      ],
+      // ...
+      "@maikolib/vite-plugin-yaml/modules"
+    ]
   }
 }
 ```
@@ -60,7 +60,7 @@ You may also add type definitions without `tsconfig`:
 
 ```ts
 // vite-env.d.ts
-/// <reference types="@modyfi/vite-plugin-yaml/modules" />
+/// <reference types="@maikolib/vite-plugin-yaml/modules" />
 ```
 
 ## 🐛 Options
