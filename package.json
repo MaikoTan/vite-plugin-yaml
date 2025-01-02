@@ -46,7 +46,7 @@
   },
   "homepage": "https://github.com/MaikoTan/vite-plugin-yaml/tree/main/#readme",
   "peerDependencies": {
-    "vite": "^3.2.7 || ^4.0.5 || ^5.0.5"
+    "vite": "^3.2.7 || ^4.0.5 || >=5.0.5"
   },
   "dependencies": {
     "@rollup/pluginutils": "5.1.0",
